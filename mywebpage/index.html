@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA with Grouped Menu Items</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+</head>
+<body>
+
+    <!-- Static Header -->
+    <header class="header">
+        <h1>Security for Developers</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left Menu Sidebar with Group Headers -->
+        <nav class="sidebar">
+            <a href="#" class="hdr" id="introduction">Introduction</a>
+            <a href="#" id="prereqs">Pre-requisites</a>
+            <a href="#" id="todo">Acknowledgements</a>
+
+            <a href="#" class="hdr" id="coreprinciples">The CIA Triade</a>
+            <a href="#" id="todo">Confidentiality</a>
+            <a href="#" id="todo">Integrity</a>
+            <a href="#" id="todo">Availability</a>
+
+            <a href="#" class="hdr" id="programming">Programming Concepts</a>
+            <a href="#" id="encoding">Encoding</a>
+            <a href="#" id="symencrypt">Symmetric Encryption</a>
+            <a href="#" id="asymencrypt">Asymmetric Encryption</a>
+            <a href="#" id="hashing">Hashing</a>
+            <a href="#" id="datacomm">Data Communication and The Web</a>            
+            <a href="#" class="sub" id="network">Network Layer (IP)</a>
+            <a href="#" class="sub" id="transport">Transport Layer (TCP/UDP TLS)</a>
+            <a href="#" class="sub" id="applayer">Application Layer (HTTP/HTTPS)</a>
+
+            <a href="#" class="hdr" id="todo">The CIA Triade In Practice</a>
+            <a href="#" id="auth">Authentication and Authorization</a>
+            <a href="#" class="sub" id="todo">Open ID</a>
+    
+            <a href="#" class="hdr" id="todo">Secure Design</a>
+            <a href="#" id="todo">Least Priviledge</a>
+            <a href="#" id="todo">Defense in Depth</a>
+            <a href="#" id="todo">Fail Securley / Error Handling</a>
+            <a href="#" id="todo">Secure Defaults</a>
+            <a href="#" id="todo">Principles of Least Exposure</a>
+            <a href="#" id="todo">Input Validation</a>
+            <a href="#" id="todo">Output Encoding</a>
+            <a href="#" id="todo">Minimize Attach Surface</a>
+            <a href="#" id="todo">Data Protection</a>
+            <a href="#" id="todo">Secure Communication</a>
+            <a href="#" id="todo">Accountabiity (Logs, Audit)</a>
+            <a href="#" id="todo">Thread Modeling / Attack Vectors</a>
+            <a href="#" id="todo">Auditing</a>
+
+            <a href="#" id="todo">Vulnerabilities</a>
+            <a href="#" id="todo">Overciew</a>
+            <a href="#" id="todo">XSS</a>
+            <a href="#" id="todo">SQL Injection</a>
+            <a href="#" id="todo">Session Hijacking</a>
+            <a href="#" id="todo">Buffer Overflows</a>
+            <a href="#" id="todo">Malware, Worms</a>
+            <a href="#" id="todo">Rootkits, Kernal Access</a>
+
+            <a href="#" class="hdr" id="todo">Compliance</a>
+            <a href="#" id="todo">Security Policies</a>
+            <a href="#" id="todo">Governance</a>
+            <a href="#" id="todo">Monitoring</a>
+            <a href="#" id="todo">Logging</a>
+            <a href="#" id="todo">Auditing</a>
+            <a href="#" id="todo">Intrusion Detection</a>
+
+            <a class="hdr" href="#" id="todo">Testing</a>
+            <a href="#" id="todo">Penetration Testing</a>
+
+            <a href="#" class="hdr" id="todo">Network Security</a>
+            <a href="#" id="todo">Firewalls</a>
+            <a href="#" id="todo">VPNs</a>
+            <a href="#" id="todo">Crowdsource</a>
+
+            <a href="#" class="hdr" id="todo">Security Processes</a>
+            <a href="#" id="todo">Secure SDLC</a>
+            <a href="#" id="todo">PKI Infrastructure</a>
+            <a href="#" id="todo">Key Management (keystore)</a>
+            <a href="#" id="todo">Certificate Management</a>
+            <a href="#" id="todo">Risk Assessment</a>
+            <a href="#" id="todo">Risk Mitigation</a>
+            <a href="#" id="todo">Patch Process</a>
+            <a href="#" id="todo">Knowledge of Common Vulnerabiities (CVE / Mitre)</a>
+            <a href="#" id="todo">Security Reviews and Tools</a>
+            <a href="#" id="todo">Third-Party Libraries (wrappers, log4j)</a>
+            <a href="#" id="todo">SOC2</a>
+            <a href="#" id="todo">Fips 140</a>
+
+            <a href="#" class="hdr" id="todo">Resources</a>
+            <a href="#" id="todo">OWASP</a>
+            <a href="#" id="todo">CVE (Mitre)</a>
+        </nav>
+
+        <!-- Content Area -->
+        <div id="content" class="content">
+            <!-- Default content loaded here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Load default page content (introduction.html)
+            $("#content").load("introduction.html");
+
+            // Event handler for menu links
+            $(".sidebar a").on("click", function (event) {
+                event.preventDefault(); // Prevent default link behavior
+                const page = $(this).attr("id") + ".html"; // Get the HTML file name
+                $("#content").load(page); // Load the HTML content
+            });
+        });
+    </script>
+
+</body>
+</html>
