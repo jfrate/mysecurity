@@ -1,0 +1,15 @@
+<h2>Security Processes</h2>
+<p>Under Construction</p>
+<p>Note
+Security Goverance (SOC2, Checkmarx)<br>
+PKI Infrastructure<br>
+Key Management (keystore)<br>
+Certificate Management<br>
+Risk Assessment<br>
+Risk Mitigation<br>
+Patch Process<br>
+Knowledge of Common Vulnerabiities (CVE / Mitre)<br>
+Security Reviews and Tools<br>
+Third-Party Libraries (wrappers, log4j)<br>
+SOC2<br>
+Fips 140<br>

@@ -1,0 +1,70 @@
+<h2>TODO</h2>
+Secure SDLC
+
+
+Secure Software Development Life Cycle (Secure SDLC) is a software development process that integrates security practices at each phase of the Software Development Life Cycle (SDLC) to ensure that software is secure from the very beginning. The goal of Secure SDLC is to identify and mitigate potential security risks and vulnerabilities early in the development process, thereby producing more secure and reliable software.
+Phases of Secure SDLC:
+
+    Planning and Requirements Gathering:
+        Security Objective Definition: Identify security requirements based on regulatory, business, and functional needs.
+        Risk Assessment: Analyze the project scope and potential security risks that could arise during development.
+        Threat Modeling: Identify potential security threats and attack vectors, and document mitigations.
+        Security Policies and Standards: Define security policies that must be adhered to throughout development.
+
+    Design:
+        Secure Architecture Design: Create a system architecture that incorporates security principles like least privilege, defense in depth, and secure data handling.
+        Threat Modeling Refinement: Update threat models based on design decisions and identify potential vulnerabilities.
+        Security Design Review: Conduct reviews of the software design to ensure that security concerns are adequately addressed.
+        Selection of Security Controls: Identify the necessary security controls (e.g., encryption, authentication) to mitigate risks.
+
+    Development:
+        Secure Coding Practices: Developers adhere to secure coding guidelines and use tools to enforce secure coding standards (e.g., avoiding SQL injection, proper input validation).
+        Static Code Analysis: Use automated tools to perform static analysis of the code for security vulnerabilities.
+        Peer Code Reviews: Include security-focused code reviews as part of the development process.
+        Third-Party Component Security: Ensure that third-party libraries or frameworks are up-to-date and free from known vulnerabilities.
+
+    Testing:
+        Security Testing: Conduct security testing in addition to functional and performance testing. This can include:
+            Penetration Testing: Simulate attacks on the software to uncover vulnerabilities.
+            Dynamic Application Security Testing (DAST): Test the running application for vulnerabilities in a production-like environment.
+            Static Application Security Testing (SAST): Analyze the source code for vulnerabilities without executing the program.
+        Automated Testing: Integrate security tests into the CI/CD pipeline to catch security issues early and continuously.
+        Fuzz Testing: Introduce random or invalid inputs to discover bugs and vulnerabilities.
+
+    Deployment:
+        Secure Configuration: Ensure secure configuration of deployment environments (e.g., server security settings, firewalls, access control).
+        Security Hardening: Apply security hardening techniques to the production environment, such as disabling unnecessary services, implementing strong authentication, and enforcing least privilege.
+        Incident Response Planning: Develop plans for handling security incidents during production.
+
+    Maintenance and Monitoring:
+        Security Patching: Continuously monitor the software for vulnerabilities and release security patches promptly.
+        Vulnerability Scanning: Regularly scan the deployed application and environment for vulnerabilities.
+        Log Monitoring: Monitor logs for abnormal behavior that may indicate a security breach.
+        Incident Response: Have a defined incident response plan in place to quickly address any security breaches.
+
+    End-of-Life/Disposal:
+        Secure Decommissioning: Ensure that software and systems are securely decommissioned by removing sensitive data and securely archiving or deleting data according to security and compliance standards.
+
+Key Principles of Secure SDLC:
+
+    Shift Left: This principle emphasizes addressing security early in the SDLC phases (from planning and design) rather than waiting until the testing or deployment phases.
+    Security by Design: Ensure that security is a core component of the software's design, rather than an afterthought.
+    Continuous Monitoring: Even after deployment, security should be monitored continuously to detect and respond to new vulnerabilities.
+    Automation: Automate security testing as much as possible (e.g., static analysis, penetration testing) to ensure that issues are caught quickly and consistently.
+
+Benefits of Secure SDLC:
+
+    Reduced Costs: Identifying and fixing security issues early in development is less costly than addressing them after deployment.
+    Improved Compliance: Secure SDLC helps ensure compliance with industry standards and regulations, such as GDPR, HIPAA, or PCI-DSS.
+    Enhanced Software Security: By incorporating security throughout the development process, the final product is less likely to have vulnerabilities that could be exploited by attackers.
+    Faster Time to Market: With security embedded into the SDLC, fewer issues arise post-release, leading to faster development cycles and less time spent fixing critical bugs after deployment.
+
+Common Secure SDLC Frameworks:
+
+    Microsoft Secure Development Lifecycle (SDL): A set of practices aimed at reducing software vulnerabilities and improving security.
+    OWASP Software Assurance Maturity Model (SAMM): A framework to help organizations formulate and implement a security strategy tailored to their risk profile.
+    NIST SP 800-64: A security-focused SDLC framework from the National Institute of Standards and Technology, providing guidelines on integrating security into the software development process.
+
+Conclusion:
+
+The Secure SDLC approach ensures that security is an integral part of software development from the start, minimizing vulnerabilities and improving overall software quality. By integrating security at each phase, organizations can better protect their applications and data from ever-evolving threats.
