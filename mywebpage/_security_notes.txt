@@ -1,0 +1,208 @@
+CIA Triad
+Vulnerabilities, Threats
+Threat management not really possible
+Instead: Vulnerability management
+Design flaws, coding errors
+Defects (any errors that introduce vulnerabilities), flaws (design errors), bugs (coding errors)
+Software security minimuzes design flaws and coding errors
+Software security primariliy protcts against unauthorized access and misuse (to violate CIA)
+Softsare saftey ensures software performs as intended without causing harm
+No perfect software securityBest to manage software wecurity (ris management, probabilities, consequences) - risk manifestation
+Probability: how likely a vulnerability is exploted by a Threat
+Consequences: measure cost of exploit
+
+Threat vector (mechanism that cyber criminals get access to unauthorized services)
+e.g.,
+disgruntled software engineers (which are a threat vector) (logic bomb)
+hardware (TPM Trusted Platform Module)
+security requirements (e.g., if no requirement for access control)
+architecture --> design must enforce security requuirements
+--> code must implement design
+if anything breaks then sofware becomes vulnerable
+natural disasters (availability)
+hardware (keyboard logger)
+redundancy, UPS, physical securityc
+code-level Threats
+intentional, unintentional (education, automation, vulnerabilityu management)
+- security oversight
+
+design patters for security for well-known solutions for recurring security problems
+Adopt design problems (patterns)
+Desgin pattern limitations (must be adopted across SDLC)
+Architectural design decisions (overarching design decisions)
+Recurring architectural paterns (quality attribute problems: security etc.)
+E.g., single access point (only one entry point available to software app)
+Patterns imperfect, trade-offs (e.g., single access -= single point of failure)
+Threat modeling (and categorization)  STRIDE model
+
+
+*** Security tactics (architectural level): detect attacks, resist attacks, react to attacks, recover from attacks
+e.g., encryoting data resists attacks, revoking access recovers from an attack
+Secureity patterns (design patterns for security, architecture patterns)
+Deisgn patterns become architectural patterns when adopted across wole systems
+Manage security vulnerabilities (CVE) (automated)
+CVE - common weakness enumeration (categorizes the vulnerabilities from CVE)
+(symptoms of design flaws)
+
+Architecture Analysis for Security AAFS)
+Phases: ToAA, PoAA, VoAA, CoAA?
+*** PROBLEM: (e.g. during an interview) they ocnsidered a tqctic b ut cannot elqborate how that tactic got instantisted inao a concrete pattern, then seomething is wrong... probably means that tactic just remained as a tactic but never bot developed into a more specific design decision in the form of a security pattern (during POAA).
+Security anti-patterns (many) violate fail-safe defaults, open redirects, unrestrited path trversal, access control least priviledges, hard-coded passwords
+security patterns that mitigate anti-patterns
+*** OpenEMR (cse study) (typical arch analysis for security)
+*** security tactics on checklist ***
+e.g., does the software do anything about the message of message integrity? (interview question on the security tactics on verifyin gmessage integrity)
+... datga sanitization, user inut sanitization
+POAA
+Validation ruls
+
+
+SECURE CODING PRACTICES
+------------------------
+
+Don't make decisions that software vulnerable to attacksE.g., safe funtion calls
+also higher-order decision-making (arch)
+low-hanging fruit
+
+Broken authentication: password cracking, insecure comm channels, insider threats, social engineering, also custom code (as it is prone to error)
+Broken authentication allows unrestricted accessAuthentiation and Session Management solution frameworks already established
+Software frmameworks: provide generic  ut necessary features, utilize well-defined interfaces, allow extensioins for domain requirements
+Must meet standards (e.g., ASVS from OWASP  both authetnicatoin and session management)
+Reputation acceptance, reports on known security vulnerability of framework, support for tech questions and to maintain code base.
+
+*** threat enviornment constantly evolving (newly emrging threats)
+Central Session Registry?
+
+Direct object references
+Access controlE.g.: https://company.com/users?id=123
+data or information leakage
+disallow insecure direct object reference
+
+Sensitive information expousre (PII, Credit Card numbers)
+Guard sensitive informatoin '
+data at rest and in transit (sensitive informatoin needs to be guarded)
+access control and encryoption
+access control: 1) identification 2) authenticatoin 3) authnorization (permissions, need-to-know)
+Encrption: strength, configuratoin of encrption scheme (key length e.g.), attack scenario'safe
+don't implement own access control and encryption solutions
+
+Proper configuration (else solutions don't work)
+proper error handling
+errors: catch as many errors as possible, filter error information
+verify trustworthiness of third-party security component
+
+Testing for security (thre conventional testing techniques)
+- Black-box testing (testers don't access source code)
+- White-box testing (full access to souce code and design)
+- Gray-box testing (hybrid)
+security-specific testing: static analysis, dynamic analysis, penn testing'
+
+Penetration testing:
+- ethical hacking, siulateed attacks
+*** KALI Linux includes tools (predecesors: back | track) (Linux system)
+
+Vulnerability management
+Vulnerability management policies
+Vulnerability management discovery
+Vulnerability management analysis and prioritizaion
+Vulnerability management documentation
+Becoming more standarized (swuch as repo's like CVE and CWE)
+Needs to be autoatd as much as possible to be effecitve
+Commercial tool: nessus (also vulnerability assessment)
+CVSS: common vulnerability scoring system specificstions documentation
+
+DevSecOpoos
+Cloud computing (tenants share servers, vulnerabilities in hypervisors)
+Server access that CSP's (cloud service providers) have (need estra precutions, e.g. encryption and monitoring (also SIA's agreements); other countermeasures (during reqruiements phase)
+Constantly evolving (continuing education)
+Use proven solutiojns (reusable) as much as possible
+Rules: GDPR (EU), HIIPA, PCIDSS
+
+CERTIFICATIONS:
+GIAC Certifications (GWEB)
+EC-Council Certification (CASE): Certificatoin Applicatoins Security engineeringISC2: ICSSP, CSSLP
+CompTIA Security+ sertification exam
+
+RESOURCES:
+CVE (Mite) and CWESecure by Design website (CISA - American's Cyber Design Agency)
+OWASPIEE Security and Privacy (IEEE Xplore website)
+CERT division of SensitiveSEI CERT Coding standardsCVSS
+SANS?
+InfoSec, AppSec sources?
+NIST (Authentication)
+OWASP SAMM
+OWASP cheat sheet for threat modeling
+OWASP cheat sheets
+OWASP ASVS
+CIS (center for internet security)
+NVD (national vulnerability database)
+OWASP dependency check tool
+OWASP testing guide
+OWASP session management cookbook
+OWASP WSTG
+OWASP Top 10 Proactive Controls
+
+#############################
+Attack vecors are verry different
+e.g. web system vs embedded system
+also languages have different attack vectors (e.g. Java vs C)
+
+How to stay abreat of current technologies
+Revier (impact all code) vs writing code (some impact)
+
+
+
+
+*** Embrace security in development
+
+
+*** Embrace security in testing
+
+
+*** Embrace securit in deployment
+Often ignored for security coding plan
+How to manage sensitive configuration of systems being deployed
+Use of files on a file system or a startup scriopt may not be secure enough (attack vectors)
+Toools and patterns to improve security and secrecy of these sensitive data points
+Nobody else can deploy your system
+Containerized framework build-on support for secretns so use those
+Automatoin increases security (when human involved increaswe risk of compromoize with mistakes or a bad actor)'
+Automatoin not stopgap but great opportunity
+Force code through peer-review then only automation
+Secure deployment strategires
+Try to think like a bad actor
+
+
+Implement best practices 
+security is a moving target
+focus on most current best pracdtices
+web resources to help build platform for secure development
+secure practices around these tasks
+many are free 
+risk managemnet has a huge focus
+industry is managing risk and documenting them
+may find enough to get started
+vulnerability mangemant best practices should be followed (for companies and teams) (Scoring, Ranking, Proritizing) (Tracking and Reporting)
+Testing and deployment: a lot documented (but need own) attqck trees not as common
+Start by trying what peers are doing
+
+
+Credentail stuffing, massgiver assigment
+Entropy
+Session Fixation
+Recover lost password (weak recovery process, weak security questions, allow different email addresses thatn what's already in systm)
+Log injection, log forging.  Execute code from log.  Corrupt log files.  Insert false information about attack.
+Logging and monitoring: how much is enough? how mush is too much? OWASP
+Implicit trust given to the web application (SSRF)
+Note trade-offs
+***** SSRF
+... also database connection (all reources in use by the web application)
+Validation when calling a remote resource (SSRF)
+Note trade-offs
+"SameSite" cookie attribute, CSRF attacks
+AJAX, SOAP (WS-Security, message security), vulnerabilitiesWeb application firewall (WAF)
+Intursion detection system at the application layer
+Security concerns for serializatoin, deserialization
+CORS 
+File uploades
+Cloudflare, Akamai (DDoS)

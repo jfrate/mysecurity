@@ -1,0 +1,62 @@
+<h2>Access Control</h2>
+<p>
+    There are several approaches to **authorization**, which is the process of determining what a user or system is allowed to do after authentication. These approaches vary depending on the system design, security requirements, and complexity. Common approaches to authorization include:
+
+### 1. **Role-Based Access Control (RBAC)**
+   - **Overview**: Permissions are assigned based on the roles users are given. A role represents a set of permissions, and users are assigned roles based on their function in an organization or system.
+   - **Example**: A "Manager" role might have access to employee data and reports, while a "Staff" role might only have access to their own profile.
+   - **Strengths**: Easy to manage and scalable in large organizations.
+   - **Weaknesses**: Can become complex when a user requires multiple roles or permissions outside their role.
+
+### 2. **Attribute-Based Access Control (ABAC)**
+   - **Overview**: Access is granted based on attributes (such as user properties, resource properties, or environmental conditions). Policies are defined using attributes rather than predefined roles.
+   - **Example**: A policy might allow access to a document if the user's department is "HR" and the document's sensitivity level is "low."
+   - **Strengths**: Very flexible and granular.
+   - **Weaknesses**: Can become complicated to manage due to the number of attributes and policies.
+
+### 3. **Discretionary Access Control (DAC)**
+   - **Overview**: The resource owner has the authority to decide who is allowed to access specific resources. Permissions are granted at the discretion of the owner.
+   - **Example**: A file owner in a system like Linux can set permissions for other users to read, write, or execute the file.
+   - **Strengths**: Simple and gives resource owners full control.
+   - **Weaknesses**: Less secure, as users may unintentionally grant access to unauthorized users.
+
+### 4. **Mandatory Access Control (MAC)**
+   - **Overview**: Access is based on a system-wide policy that cannot be altered by individual users. Users and resources are classified into levels of security, and the system enforces access rules.
+   - **Example**: A government system where access to documents is based on clearance levels (e.g., Top Secret, Secret).
+   - **Strengths**: Highly secure, ideal for environments requiring strict control (e.g., military or governmental).
+   - **Weaknesses**: Rigid and complex to implement and manage.
+
+### 5. **Policy-Based Access Control (PBAC)**
+   - **Overview**: Access is governed by a set of policies that define rules for authorization. These policies are written separately from the application's code, allowing dynamic control of permissions.
+   - **Example**: Policies could be created based on time of day, geographic location, or specific actions within the application.
+   - **Strengths**: Flexible and adaptable to various scenarios.
+   - **Weaknesses**: Requires good policy management and can be complex to configure.
+
+### 6. **Token-Based Authorization (OAuth)**
+   - **Overview**: Access tokens are used to authorize users or systems. Users authenticate, receive a token, and present it to access resources. OAuth is widely used in web and API authentication scenarios.
+   - **Example**: A user logs in with a social media account (OAuth provider) and receives a token to access third-party applications.
+   - **Strengths**: Lightweight, works well with APIs and mobile applications.
+   - **Weaknesses**: Token management and expiration need careful handling for security.
+
+### 7. **Identity-Based Access Control (IBAC)**
+   - **Overview**: Access is granted based on the identity of the user or system. This is often the simplest form of access control, where identity determines what resources a user can access.
+   - **Example**: A user with a particular email address may be allowed access to specific resources.
+   - **Strengths**: Simple and straightforward.
+   - **Weaknesses**: Does not support complex permission requirements.
+
+### 8. **Risk-Adaptive Access Control (RAdAC)**
+   - **Overview**: Access decisions are based on the risk involved in granting access. The system dynamically adjusts access based on real-time risk assessments, such as behavioral patterns or environmental factors.
+   - **Example**: A user accessing a system from an unfamiliar device may have restricted access until additional verification is completed.
+   - **Strengths**: Adaptable and responsive to changing conditions, improving security.
+   - **Weaknesses**: Requires complex risk modeling and monitoring.
+
+### 9. **Fine-Grained Access Control (FGAC)**
+   - **Overview**: Access is controlled at a very detailed level, often down to individual records or fields within a dataset.
+   - **Example**: A customer service representative can only view certain fields (like name and address) but cannot access sensitive fields (like payment information).
+   - **Strengths**: Provides very specific and tailored access to sensitive data.
+   - **Weaknesses**: Can be difficult to manage due to the high level of granularity required.
+
+---
+
+Each of these approaches has its advantages and disadvantages, and they can be combined depending on the system's needs for security, flexibility, and usability.
+</p>
