@@ -1,2 +1,89 @@
 <h2>Encoding</h2>
-<p>Under Construction</p>
+
+<p>
+    <strong>Encoding</strong> is the process of converting data from one format to another. 
+    An algorithm maps characters from the source format to the destination format.
+</p>
+
+<p>
+    Encoding is primarily used to transform data into a format compatible with a specific system or medium, typically for transmission or storage.
+</p>
+
+<p>
+    Encoding plays a fundamental role in security. While encoding itself does not protect data—since it is not a cryptographic function—it is essential for many security mitigations that will be discussed.
+</p>
+
+<p>
+    Developers often use encoding schemes in their projects without fully understanding the underlying processes. In this section, we’ll provide an overview of some common encoding algorithms to help you gain a deeper understanding of how encoding works.
+</p>
+
+<p>
+    There are many types of encoding algorithms used for different purposes. Below are some of the most common encoding algorithms every developer should be familiar with:
+</p>
+
+<ul class="indented-list">
+    <li><strong>Character Encoding</strong> (e.g., ASCII, Unicode such as UTF-8, UTF-16, UTF-32)</li>
+    <li><strong>Binary Encoding</strong> (e.g., Base64, Hexadecimal)</li>
+    <li><strong>URL Encoding</strong></li>
+    <li><strong>HTML Encoding</strong></li>
+</ul>
+
+<p>
+    For example, when sending data over the web, encoding can 
+    ensure special characters (like spaces or symbols) are 
+    safely transmitted.
+</p>
+
+<p>
+Reversible<br>
+Encoding is <b>reversible</b>, meaning the original data can be 
+decoded without any loss of information. The process converts 
+data into a new format but does not alter the content itself.
+</p>
+
+<p>
+Common Use Cases<br>
+<b>Character Encoding</b><br>
+Different systems interpret text differently. Encoding formats 
+like **UTF-8** or **ASCII** ensure consistent text display across 
+devices and platforms.'
+</p>
+
+<p>
+<b>URL Encoding</b><br>
+Converts special characters in URLs (like spaces and symbols) 
+into a format that can be transmitted safely, replacing them 
+with encoded representations (e.g., `%20` for a space).
+</p>
+
+<p>
+</b>Base64 Encoding</b><br>
+Converts binary data (like images or files) into a text format 
+that can be embedded in web pages or emails.
+</p>
+<br>
+
+<p>
+    <b>Examples</b><br>
+1. **Text Encoding (UTF-8)**:
+   - Original: `Hello, world!`
+   - Encoded (UTF-8): The text is represented in bytes that the computer can interpret consistently across different systems.
+
+2. **URL Encoding**:
+   - Original: `https://example.com/search?query=hello world`
+   - Encoded: `https://example.com/search?query=hello%20world`
+
+3. **Base64 Encoding**:
+   - Used to encode binary data (like an image) into a string.
+   - Original (binary data): `[binary data of an image]`
+   - Encoded: `iVBORw0KGgoAAAANS...`
+
+### Difference from Encryption:
+- **Encoding** does not provide confidentiality. The encoded data can still be understood if someone has access to it.
+- **Encryption**, on the other hand, transforms data in a way that only authorized parties can decode, providing data secrecy.
+
+### Difference from Hashing:
+- **Encoding** is reversible, whereas **hashing** is not. Hashing transforms data into a fixed-size string, usually to ensure integrity, but it cannot be turned back into its original form.
+
+In summary, **encoding** is a method for representing data in a format that different systems can handle, ensuring compatibility without altering the underlying content or securing it like encryption.
+</p>

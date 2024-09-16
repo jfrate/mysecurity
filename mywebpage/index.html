@@ -14,30 +14,48 @@
 
     <!-- Static Header -->
     <header class="header">
-        <h1>Security for Developers</h1>
+        <h1>Professional Application Security</h1>
     </header>
 
     <div class="container">
         <!-- Left Menu Sidebar with Group Headers -->
         <nav class="sidebar">
-            <h2>Preface</h2>
-            <a href="#" class="hdr" id="introduction">Welcome</a>
-            <a href="#" class="hdr" id="todo">Security Principles</a>
-            <a href="#" id="coreprinciples">The CIA Triade</a>
-            <a href="#" id="securesdlc">Secure SDLC</a>
-            <a href="#" id="compliance">Compliance</a>
-            <a href="#" id="processes">Processes</a>
-            <a href="#" id="todo">OWASP Top Ten</a>
-            <a href="#" class="hdr" id="todo">Software Engineer Role</a>
+            <a href="#" class="part" id="introduction">Preface</a>
+            <a href="#" class="hdr" id="todo">Goals</a>
             <a href="#" class="hdr" id="prereqs">Pre-requisites</a>
             <a href="#" class="hdr" id="todo">Acknowledgements</a>
 
-            <h2> Part I: Core Technology</h2>
+            <a href="#" class="part" id="todo">Part I: Fundamentals</a>
+            <a href="#" class="hdr" id="todo">Security Principles</a>
+            <a href="#" id="coreprinciples">The CIA Triade</a>
+            <a href="#" id="todo">Accountability</a>
+            <a href="#" id="todo">Defense-in-Depth</a>
+            <a href="#" id="todo">Deter, Detect, Delay</a>
+            <a href="#" id="todo">Respond, Report, Recover</a>
+            <a href="#" class="hdr" id="todo">Security Governance</a>
+            <a href="#" id="compliance">Compliance</a>
+            <a href="#" id="todo">Security Policies</a>
+            <a href="#" id="processes">Processes</a>
+            <a href="#" class="hdr" id="securesdlc">Secure SDLC</a>
+            <a href="#" class="hdr" id="todo">The Software Engineer's Role</a>
+            <a href="#" id="todo">What do I do?</a>
+            <a href="#" id="todo">How do I do it?</a>
+            <a href="#" id="todo">Where do I get help?</a>
+
+            <a href="#" class="part" id="todo">Part II: Core Technologies</a>
             <a href="#" class="hdr" id="programming">Programming Methods</a>
             <a href="#" id="encoding">Encoding</a>
-            <a href="#" id="symencrypt">Symmetric Encryption</a>
-            <a href="#" id="asymencrypt">Asymmetric Encryption</a>
+            <a href="#" id="todo">Checksums</a>
+            <a href="#" id="encoding">Cryptography</a>
+            <a href="#" class="sub" id="symencrypt">Symmetric Encryption</a>
+            <a href="#" class="sub" id="asymencrypt">Asymmetric Encryption</a>
+            <a href="#" class="sub" id="asymencrypt">Key Exchange diffie-hellman</a>
             <a href="#" id="hashing">Hashing</a>
+            <a href="#" id="todo">Digital Signatures</a>
+            <a href="#" id="todo">Timestamping</a>
+            <a href="#" id="todo">Message Authentication Code</a>
+            <a href="#" id="todo">HMAC</a>
+            <a href="#" id="todo">Blockchain Signatures</a>
             <a href="#" class="hdr" id="todo">Infrastructure</a>
             <a href="#" id="datacomm">Data Communication</a>
             <a href="#" class="sub" id="datacomm">FTP</a>
@@ -45,8 +63,37 @@
             <a href="#" class="sub" id="network">Network Layer (IP)</a>
             <a href="#" class="sub" id="transport">Transport Layer (TCP/UDP TLS)</a>
             <a href="#" class="sub" id="applayer">Application Layer (HTTP/HTTPS)</a>
-    
-            <h2>Part II: Secure Code</h2>
+
+            <a href="#" class="part" id="todo">Part III: Identity and Access</a>
+            <a href="#" class="hdr" id="auth">Authentication</a>
+            <a href="#" id="auth">Identity</a>
+            <a href="#" class="sub" id="todo">Federated Identify</a>
+            <a href="#" id="todo">Authentication Flow</a>
+            <a href="#" class="sub" id="todo">JWT Tokens</a>        
+            <a href="#" class="sub" id="todo">Open ID</a>
+            <a href="#" class="sub" id="todo">Open ID Connect</a>
+            <a href="#" class="sub" id="todo">OAuth2</a>
+            <a href="#" class="sub" id="todo">OAuth</a>
+            <a href="#" id="x509">X.509 Certificates</a>
+            <a href="#" class="sub" id="todo">Certificate Format</a>
+            <a href="#" class="sub" id="todo">Sample Certificate Provider</a>
+            <a href="#" class="sub" id="certconsumption">Certificate Consumption</a>
+            <a href="#" class="sub" id="todo">Self-signed Certificates</a>
+            <a href="#" class="sub" id="todo">Certificate Authorities</a>
+            <a href="#" class="sub" id="chainoftrust">Chain of Trust</a>
+            <a href="#" id="todo">multi-factor authentication</a>
+
+            <a href="#" class="hdr" id="authorization">Authorization</a>
+            <a href="#" id="authorizationdefs">Definitions</a>
+            <a href="#" id="accesscontrol">Access Control</a>
+            <a href="#" id="todo">OAuth2</a>
+            <a href="#" class="sub" id="todo">JWT Tokens</a>
+
+            <a href="#" class="hdr" id="iams">Vendor IAMs</a>
+            <a href="#" id="todo">LDAP</a>
+            <a href="#" id="todo">OpenAM</a>
+
+            <a href="#" class="part" id="todo">Part IV: Secure Applications</a>
             <a href="#" class="hdr" id="securecode">Secure Design and Coding</a>
             <a href="#" id="todo">Least Priviledge</a>
             <a href="#" id="todo">Defense in Depth</a>
@@ -71,41 +118,16 @@
             <a href="#" id="todo">Malware, Worms</a>
             <a href="#" id="todo">Rootkits, Kernal Access</a>
 
-            <h2>Part III: Identity and Access Management</h2>
-            <a href="#" class="hdr" id="auth">Authentication</a>
-            <a href="#" id="auth">Identity</a>
-            <a href="#" class="sub" id="todo">Federated Identify</a>
-            <a href="#" id="todo">Authentication Flow</a>
-            <a href="#" class="sub" id="todo">JWT Tokens</a>        
-            <a href="#" class="sub" id="todo">Open ID</a>
-            <a href="#" class="sub" id="todo">Open ID Connect</a>
-            <a href="#" class="sub" id="todo">OAuth2</a>
-            <a href="#" class="sub" id="todo">OAuth</a>
-            <a href="#" id="todo">X.509 Certificates</a>
-            <a href="#" class="sub" id="todo">Certificate Format</a>
-            <a href="#" class="sub" id="todo">Sample Certificate Provider</a>
-            <a href="#" class="sub" id="todo">Certificate Consumption</a>
-            <a href="#" class="sub" id="todo">Self-signed Certificates</a>
-            <a href="#" class="sub" id="todo">Certificate Authorities</a>
-            <a href="#" id="todo">multi-factor authentication</a>
+            <a href="#" class="hdr" id="todo">Third-Party Dependencies</a>
 
-            <a href="#" class="hdr" id="authorization">Authorization</a>
-            <a href="#" id="authorizationdefs">Definitions</a>
-            <a href="#" id="accesscontrol">Access Control</a>
-            <a href="#" id="todo">OAuth2</a>
-            <a href="#" class="sub" id="todo">JWT Tokens</a>
-
-            <a href="#" class="hdr" id="iams">Vendor IAMs</a>
-            <a href="#" id="todo">LDAP</a>
-            <a href="#" id="todo">OpenAM</a>
-
-            <h2>Part IV: Accountability</h2>
+            <a href="#" class="part" id="todo">Part V: Accountability</a>
             <a href="#" class="hdr" id="todo">Non-repudiation</a>
             <a href="#" class="hdr" id="todo">Auditing</a>
             <a href="#" class="hdr" id="todo">Logging</a>
 
             <a href="#" class="hdr" id="auth">Data Management</a>
             <a href="#" id="auth">Data Privacy</a>
+            <a href="#" id="auth">Data Protection</a>
             <a href="#" id="auth">Zero-trust systems</a>
             <a href="#" class="hdr" id="auth">ETL</a>
 
