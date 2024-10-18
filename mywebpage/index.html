@@ -21,15 +21,16 @@
         <!-- Left Menu Sidebar with Group Headers -->
         <nav class="sidebar">
             <a href="#" class="partTop" id="introduction">Preface</a>
-            <a href="#" class="hdr" id="todo">Goals</a>
+            <a href="#" class="hdr" id="goals">Goals</a>
             <a href="#" class="hdr" id="prereqs">Pre-requisites</a>            
 
-            <a href="#" class="part" id="todo">Part I: Fundamentals</a>
+            <a href="#" class="part" id="fundamentals">Part I: Fundamentals</a>
             <a href="#" class="hdr" id="ciatriade">The CIA Triade</a>
+            <a href="#" class="hdr" id="todo">Zero-Trust Systems</a>
             <a href="#" class="hdr" id="seclayers">Defense in Depth</a>
             <a href="#" class="hdr" id="secgov">Security Governance</a>
-            <a href="#" class="hdr" id="securesdlc">Secure SDLC</a>
-            <a href="#" class="hdr" id="engrole">Threat Modeling</a>
+            <a href="#" class="hdr" id="securesdlc">Secure SDLC</a>            
+            <a href="#" class="hdr" id="todo">Threat Modeling</a>
             <a href="#" class="hdr" id="engrole">The Software Engineer's Role</a>
 
             <a href="#" class="part" id="todo">Part II: Methods</a>
@@ -43,7 +44,7 @@
             <a href="#" class="hdr" id="todo">Identify and Access</a>
             <a href="#" id="authentication">Authentication</a>
             <a href="#" id="authorization">Authorization</a>
-            <a href="#" id="iams">Vendor IAMs</a>
+            <a href="#" id="iams">Application Integration</a>
             <a href="#" class="hdr" id="accountability">Accountability</a>
             <a href="#" class="hdr" id="todo">Configuration</a>
             <a href="#" class="hdr" id="todo">Deployment</a>
@@ -80,15 +81,22 @@
         $(document).ready(function () {
             // Load default page content (introduction.html)
             $("#content").load("introduction.html");
-
+    
             // Event handler for menu links
             $(".sidebar a").on("click", function (event) {
                 event.preventDefault(); // Prevent default link behavior
-                const page = $(this).attr("id") + ".html"; // Get the HTML file name
-                $("#content").load(page); // Load the HTML content
+    
+                // Remove 'active' class from all links
+                $(".sidebar a").removeClass("active");
+    
+                // Add 'active' class to the clicked link
+                $(this).addClass("active");
+    
+                // Get the HTML file name and load the content
+                const page = $(this).attr("id") + ".html"; 
+                $("#content").load(page);
             });
         });
-    </script>
-
+    </script>    
 </body>
 </html>
